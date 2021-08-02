@@ -1,0 +1,23 @@
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: #7A6174;
+  color: white
+}
+h1 {
+  font-size: 48px;
+  
+}
+h2 {
+  font-size: 14px
+}
+.About {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+h3 {
+  text-align: left;
+}
+
+p {
+  text-align: left;
+}

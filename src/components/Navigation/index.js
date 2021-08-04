@@ -6,10 +6,14 @@ import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import PortraitIcon from '@material-ui/icons/Portrait';
-import DraftsIcon from '@material-ui/icons/Drafts';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
 
+
+
+function Navigation(props) {
 
 const StyledMenu = withStyles({
   paper: {
@@ -42,7 +46,7 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
-export default function CustomizedMenus() {
+
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -53,6 +57,15 @@ export default function CustomizedMenus() {
     setAnchorEl(null);
   };
 
+  const {
+    meSelected,
+    setMeSelected,
+    portfolioSelected,
+    setPortfolioSelected,
+    resumeSelected,
+    setResumeSelected,
+} = props;
+
   return (
     <div>
       <Button
@@ -62,7 +75,7 @@ export default function CustomizedMenus() {
         color="primary"
         onClick={handleClick}
       >
-        Explore
+        More, Me
       </Button>
       <StyledMenu
         id="customized-menu"
@@ -73,25 +86,51 @@ export default function CustomizedMenus() {
       >
        <StyledMenuItem>
           <ListItemIcon>
+          <Link href="#meSelected" onClick={() => {
+                setMeSelected(true);
+                setPortfolioSelected(false);
+                setResumeSelected(false);
+            }}>
+            
             <PortraitIcon fontSize="small" />
+            
+            </Link>
           </ListItemIcon>
           <ListItemText primary="Me" />
         </StyledMenuItem>
+
           <StyledMenuItem>
           <ListItemIcon>
             <WorkOutlineIcon fontSize="small" />
+            <span onClick={() => {
+                setMeSelected(false);
+                setPortfolioSelected(true);
+                setResumeSelected(false);
+            }}>
+
+            </span>
+           
           </ListItemIcon>
           <ListItemText primary="Portfolio" />
         </StyledMenuItem>
+
         <StyledMenuItem>
           <ListItemIcon>
             <LibraryBooksIcon fontSize="small" />
+            <span onClick={() => {
+                setMeSelected(false);
+                setPortfolioSelected(false);
+                setResumeSelected(true);
+            }}></span>
           </ListItemIcon>
           <ListItemText primary="Resume" />
         </StyledMenuItem>
       </StyledMenu>
     </div>
   );
+  
 }
+
+  export default Navigation;
 
 

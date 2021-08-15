@@ -6,12 +6,14 @@ import {
   Box,
   Heading,
   Text,
+  Button,
   Image,
+  Icon,
   IconButton,
+  createIcon,
+  IconProps,
+  useColorModeValue,
 } from '@chakra-ui/react';
-import { Link } from "@chakra-ui/react"
-import { ExternalLinkIcon } from '@chakra-ui/icons'
-
 
 import Me from '../../assets/images/react-profile.png'
 
@@ -26,35 +28,54 @@ export default function CallToActionWithVideo() {
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading
             lineHeight={1.1}
-            fontWeight={800}
-            fontSize={36}
-            >
+            fontWeight={600}
+            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
             <Text
               as={'span'}
               position={'relative'}
               _after={{
                 content: "''",
                 width: 'full',
-                height: '80%',
+                height: '30%',
                 position: 'absolute',
                 bottom: 1,
                 left: 0,
                 bg: 'red.400',
                 zIndex: -1,
-              
               }}>
-              Hiya,
+              Write once,
             </Text>
             <br />
-            
+            <Text as={'span'} color={'red.400'}>
+              use everywhere!
+            </Text>
           </Heading>
-          <Text color={'black.500'}>
-            My name is Amanda Hoshor. Web develop recent graduate. Looking to enter the exciting world of web coding in an oppurtunity that provides growth. In my free time, I can be found at local pop up shows or getting lost in the mountain of UT. 
+          <Text color={'gray.500'}>
+            Snippy is a rich coding snippets app that lets you create your own
+            code snippets, categorize them, and even sync them in the cloud so
+            you can use them anywhere. All that is free!
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: 'column', sm: 'row' }}>
-            
+            <Button
+              rounded={'full'}
+              size={'lg'}
+              fontWeight={'normal'}
+              px={6}
+              colorScheme={'red'}
+              bg={'red.400'}
+              _hover={{ bg: 'red.500' }}>
+              Get started
+            </Button>
+            <Button
+              rounded={'full'}
+              size={'lg'}
+              fontWeight={'normal'}
+              px={6}
+              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
+              How It Works
+            </Button>
           </Stack>
         </Stack>
         <Flex
@@ -63,7 +84,15 @@ export default function CallToActionWithVideo() {
           align={'center'}
           position={'relative'}
           w={'full'}>
-          
+          <Blob
+            w={'150%'}
+            h={'150%'}
+            position={'absolute'}
+            top={'-20%'}
+            left={0}
+            zIndex={-1}
+            color={useColorModeValue('red.50', 'red.400')}
+          />
           <Box
             position={'relative'}
             height={'300px'}
@@ -75,7 +104,7 @@ export default function CallToActionWithVideo() {
               aria-label={'Play Button'}
               variant={'ghost'}
               _hover={{ bg: 'transparent' }}
-              
+              icon={<PlayIcon w={12} h={12} />}
               size={'lg'}
               color={'white'}
               position={'absolute'}
@@ -84,13 +113,13 @@ export default function CallToActionWithVideo() {
               transform={'translateX(-50%) translateY(-50%)'}
             />
             <Image
-              alt={'Me'}
+              alt={'Hero Image'}
               fit={'cover'}
               align={'center'}
               w={'100%'}
               h={'100%'}
               src={
-                "../../assets/images/react-profile.png"
+                '../../assets/images/react-profile.png'
               }
             />
           </Box>

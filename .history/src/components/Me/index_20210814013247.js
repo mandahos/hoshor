@@ -6,12 +6,11 @@ import {
   Box,
   Heading,
   Text,
+  Button,
   Image,
   IconButton,
+  useColorModeValue,
 } from '@chakra-ui/react';
-import { Link } from "@chakra-ui/react"
-import { ExternalLinkIcon } from '@chakra-ui/icons'
-
 
 import Me from '../../assets/images/react-profile.png'
 
@@ -27,8 +26,7 @@ export default function CallToActionWithVideo() {
           <Heading
             lineHeight={1.1}
             fontWeight={800}
-            fontSize={36}
-            >
+            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
             <Text
               as={'span'}
               position={'relative'}
@@ -43,13 +41,13 @@ export default function CallToActionWithVideo() {
                 zIndex: -1,
               
               }}>
-              Hiya,
+              Hi, I am Manda
             </Text>
             <br />
             
           </Heading>
-          <Text color={'black.500'}>
-            My name is Amanda Hoshor. Web develop recent graduate. Looking to enter the exciting world of web coding in an oppurtunity that provides growth. In my free time, I can be found at local pop up shows or getting lost in the mountain of UT. 
+          <Text color={'gray.500'}>
+            Web develop recent graduate. 
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}

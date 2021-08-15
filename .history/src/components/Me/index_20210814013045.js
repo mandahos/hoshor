@@ -6,12 +6,11 @@ import {
   Box,
   Heading,
   Text,
+  Button,
   Image,
   IconButton,
+  useColorModeValue,
 } from '@chakra-ui/react';
-import { Link } from "@chakra-ui/react"
-import { ExternalLinkIcon } from '@chakra-ui/icons'
-
 
 import Me from '../../assets/images/react-profile.png'
 
@@ -26,30 +25,30 @@ export default function CallToActionWithVideo() {
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading
             lineHeight={1.1}
-            fontWeight={800}
-            fontSize={36}
-            >
+            fontWeight={600}
+            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
             <Text
               as={'span'}
               position={'relative'}
               _after={{
                 content: "''",
                 width: 'full',
-                height: '80%',
+                height: '30%',
                 position: 'absolute',
                 bottom: 1,
                 left: 0,
                 bg: 'red.400',
                 zIndex: -1,
-              
               }}>
-              Hiya,
+              Hi, I am Manda
             </Text>
             <br />
             
           </Heading>
-          <Text color={'black.500'}>
-            My name is Amanda Hoshor. Web develop recent graduate. Looking to enter the exciting world of web coding in an oppurtunity that provides growth. In my free time, I can be found at local pop up shows or getting lost in the mountain of UT. 
+          <Text color={'gray.500'}>
+            Snippy is a rich coding snippets app that lets you create your own
+            code snippets, categorize them, and even sync them in the cloud so
+            you can use them anywhere. All that is free!
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}

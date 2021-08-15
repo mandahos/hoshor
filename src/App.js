@@ -5,7 +5,7 @@ import  Me  from "./components/Me";
 import  Footer  from "./components/Footer";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume"
-import background from "./assets/images/plug.png"
+// import background from "./assets/images/plug.png"
 
 
 function App() {

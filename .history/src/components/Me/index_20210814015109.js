@@ -9,8 +9,6 @@ import {
   Image,
   IconButton,
 } from '@chakra-ui/react';
-import { Link } from "@chakra-ui/react"
-import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 
 import Me from '../../assets/images/react-profile.png'
@@ -48,7 +46,7 @@ export default function CallToActionWithVideo() {
             <br />
             
           </Heading>
-          <Text color={'black.500'}>
+          <Text color={'122, 97, 116.500'}>
             My name is Amanda Hoshor. Web develop recent graduate. Looking to enter the exciting world of web coding in an oppurtunity that provides growth. In my free time, I can be found at local pop up shows or getting lost in the mountain of UT. 
           </Text>
           <Stack

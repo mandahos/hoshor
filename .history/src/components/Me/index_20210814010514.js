@@ -15,7 +15,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
 
-
+import meImage from '../../assets/images/react-profile.png';
 
   function Me() {
     return (
@@ -74,10 +74,7 @@ import Link from '@material-ui/core/Link';
         <CssBaseline />
         <AppBar position="relative">
           <Toolbar>
-            <CameraIcon className={classes.icon} />
-            <Typography variant="h6" color="inherit" noWrap>
-              Featured
-            </Typography>
+          
           </Toolbar>
         </AppBar>
         <main>
@@ -85,10 +82,12 @@ import Link from '@material-ui/core/Link';
           <div className={classes.heroContent}>
             <Container maxWidth="sm">
               <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                Projects
+                Album layout
               </Typography>
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
-               Current accessable projects.
+                Something short and leading about the collection below—its contents, the creator, etc.
+                Make it short and sweet, but not too short so folks don&apos;t simply skip over it
+                entirely.
               </Typography>
               <div className={classes.heroButtons}>
                 <Grid container spacing={2} justifyContent="center">
@@ -144,7 +143,8 @@ import Link from '@material-ui/core/Link';
         
           
         </footer>
-       
+        {/* End footer */}
       </React.Fragment>
     );
   }
+

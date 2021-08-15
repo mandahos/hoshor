@@ -13,9 +13,13 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 
-
-
+import meImage from '../../assets/images/react-profile.png';
 
   function Me() {
     return (
@@ -62,13 +66,20 @@ import Link from '@material-ui/core/Link';
     },
   }));
   
-  const cards = [1, 2, 3, 4, 5, 6];
+  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
  
 
   export default function Album() {
     const classes = useStyles();
 
+    const useStyles = makeStyles({
+      root: {
+        width: 500,
+      },
+    });
     
+    
+  
     return (
       <React.Fragment>
         <CssBaseline />
@@ -76,7 +87,7 @@ import Link from '@material-ui/core/Link';
           <Toolbar>
             <CameraIcon className={classes.icon} />
             <Typography variant="h6" color="inherit" noWrap>
-              Featured
+              Album layout
             </Typography>
           </Toolbar>
         </AppBar>
@@ -85,10 +96,12 @@ import Link from '@material-ui/core/Link';
           <div className={classes.heroContent}>
             <Container maxWidth="sm">
               <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                Projects
+                Album layout
               </Typography>
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
-               Current accessable projects.
+                Something short and leading about the collection below—its contents, the creator, etc.
+                Make it short and sweet, but not too short so folks don&apos;t simply skip over it
+                entirely.
               </Typography>
               <div className={classes.heroButtons}>
                 <Grid container spacing={2} justifyContent="center">
@@ -141,10 +154,16 @@ import Link from '@material-ui/core/Link';
         </main>
         {/* Footer */}
         <footer className={classes.footer}>
-        
+        <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
+      <BottomNavigationAction a href="https://github.com/mandahos" label="GitHub" value="recents" icon={<GitHubIcon />} />
+      <BottomNavigationAction a href="https://www.linkedin.com/in/amanda-hoshor/" label="LinkedIn" value="favorites" icon={<LinkedInIcon />} />
+      <BottomNavigationAction a href="mailto:hoshor.manda@gmail.com" label="Email" value="nearby" icon={<AlternateEmailIcon />} />
+     
+    </BottomNavigation>
           
         </footer>
-       
+        {/* End footer */}
       </React.Fragment>
     );
   }
+}

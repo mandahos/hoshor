@@ -9,8 +9,6 @@ import {
   Image,
   IconButton,
 } from '@chakra-ui/react';
-import { Link } from "@chakra-ui/react"
-import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 
 import Me from '../../assets/images/react-profile.png'

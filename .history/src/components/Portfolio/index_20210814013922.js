@@ -76,7 +76,7 @@ import Link from '@material-ui/core/Link';
           <Toolbar>
             <CameraIcon className={classes.icon} />
             <Typography variant="h6" color="inherit" noWrap>
-              Featured
+              Album layout
             </Typography>
           </Toolbar>
         </AppBar>
@@ -85,7 +85,7 @@ import Link from '@material-ui/core/Link';
           <div className={classes.heroContent}>
             <Container maxWidth="sm">
               <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                Projects
+                My Projects
               </Typography>
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
                Current accessable projects.

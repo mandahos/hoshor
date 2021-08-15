@@ -10,6 +10,9 @@ import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import Link from '@material-ui/core/Link';
 
+import Portfolio from '../Portfolio';
+import Resume from '../Resume';
+import Me from '../Me';
 
 function Navigation(props) {
 
@@ -115,11 +118,11 @@ const StyledMenuItem = withStyles((theme) => ({
         <StyledMenuItem>
           <ListItemIcon>
             <LibraryBooksIcon fontSize="small" />
-            <Link href={`${resumeSelected && 'navActive'}`} onClick={() => {
+            <span onClick={() => {
                 setMeSelected(false);
                 setPortfolioSelected(false);
                 setResumeSelected(true);
-            }}></Link>
+            }}></span>
           </ListItemIcon>
           <ListItemText primary="Resume" />
         </StyledMenuItem>

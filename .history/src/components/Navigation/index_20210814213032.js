@@ -10,6 +10,8 @@ import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import Link from '@material-ui/core/Link';
 
+import Portfolio from '../Portfolio';
+import Resume from '../Resume'
 
 function Navigation(props) {
 
@@ -84,7 +86,7 @@ const StyledMenuItem = withStyles((theme) => ({
       >
        <StyledMenuItem>
           <ListItemIcon>
-          <Link href={`${meSelected && 'navActive'}`} onClick={() => {
+          <Link href="#meSelected" onClick={() => {
                 setMeSelected(true);
                 setPortfolioSelected(false);
                 setResumeSelected(false);
@@ -100,13 +102,13 @@ const StyledMenuItem = withStyles((theme) => ({
           <StyledMenuItem>
           <ListItemIcon>
             <WorkOutlineIcon fontSize="small" />
-            <Link href={`${portfolioSelected && 'navActive'}`}onClick={() => {
+            <span onClick={() => {
                 setMeSelected(false);
                 setPortfolioSelected(true);
                 setResumeSelected(false);
             }}>
 
-            </Link>
+            </span>
            
           </ListItemIcon>
           <ListItemText primary="Portfolio" />
@@ -115,11 +117,11 @@ const StyledMenuItem = withStyles((theme) => ({
         <StyledMenuItem>
           <ListItemIcon>
             <LibraryBooksIcon fontSize="small" />
-            <Link href={`${resumeSelected && 'navActive'}`} onClick={() => {
+            <span onClick={() => {
                 setMeSelected(false);
                 setPortfolioSelected(false);
                 setResumeSelected(true);
-            }}></Link>
+            }}></span>
           </ListItemIcon>
           <ListItemText primary="Resume" />
         </StyledMenuItem>

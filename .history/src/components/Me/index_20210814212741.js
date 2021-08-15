@@ -7,7 +7,7 @@ import {
   Heading,
   Text,
   Image,
- 
+  IconButton,
 } from '@chakra-ui/react';
 import { Link } from "@chakra-ui/react"
 
@@ -73,13 +73,24 @@ export default function CallToActionWithVideo() {
             boxShadow={'2xl'}
             width={'full'}
             overflow={'hidden'}>
-            
+            <IconButton
+              aria-label={'Play Button'}
+              variant={'ghost'}
+              _hover={{ bg: 'transparent' }}
+              
+              size={'lg'}
+              color={'white'}
+              position={'absolute'}
+              left={'50%'}
+              top={'50%'}
+              transform={'translateX(-50%) translateY(-50%)'}
+            />
             <Image
               alt={'Me'}
               fit={'cover'}
               align={'center'}
-              w={'100%'}
-              h={'75%'}
+              w={'200%'}
+              h={'200%'}
               src={
                 picture
               }

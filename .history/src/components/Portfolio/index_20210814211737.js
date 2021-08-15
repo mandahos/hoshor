@@ -19,7 +19,7 @@ import Link from '@material-ui/core/Link';
 
   function Portfolio({ projects }) {
     return (
-      <p></p>
+      
     )
   }
 

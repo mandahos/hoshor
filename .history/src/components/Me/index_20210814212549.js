@@ -7,7 +7,7 @@ import {
   Heading,
   Text,
   Image,
- 
+  IconButton,
 } from '@chakra-ui/react';
 import { Link } from "@chakra-ui/react"
 
@@ -15,7 +15,7 @@ import { Link } from "@chakra-ui/react"
 
 
 
-import picture from '../../assets/images/react-profile.png'
+import Me from '../../assets/images/react-profile.png'
 
 export default function CallToActionWithVideo() {
   return (
@@ -73,15 +73,26 @@ export default function CallToActionWithVideo() {
             boxShadow={'2xl'}
             width={'full'}
             overflow={'hidden'}>
-            
+            <IconButton
+              aria-label={'Play Button'}
+              variant={'ghost'}
+              _hover={{ bg: 'transparent' }}
+              
+              size={'lg'}
+              color={'white'}
+              position={'absolute'}
+              left={'50%'}
+              top={'50%'}
+              transform={'translateX(-50%) translateY(-50%)'}
+            />
             <Image
               alt={'Me'}
               fit={'cover'}
               align={'center'}
               w={'100%'}
-              h={'75%'}
-              src={
-                picture
+              h={'100%'}
+              image={
+                "../../assets/images/react-profile.png"
               }
             />
           </Box>

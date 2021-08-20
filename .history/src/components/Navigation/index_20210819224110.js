@@ -5,9 +5,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-import FaceIcon from '@material-ui/icons/Face';
-import WorkIcon from '@material-ui/icons/Work';
-import SaveAltIcon from '@material-ui/icons/SaveAlt';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import PersonPinIcon from '@material-ui/icons/PersonPin';
+import HelpIcon from '@material-ui/icons/Help';
 
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -68,33 +68,44 @@ export default function ScrollableTabsButtonForce() {
 
   return (
     <>
-      <div className={classes.root}>
-        <AppBar position="static" color="default">
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            variant="scrollable"
-            scrollButtons="on"
-            indicatorColor="primary"
-            textColor="primary"
-            aria-label="scrollable force tabs example"
-          >
-
-            <Tab label="Me" icon={<FaceIcon />} {...a11yProps(0)} />
-            <Tab label="Portfolio" icon={<WorkIcon />} {...a11yProps(1)} />
-            <Tab label="Resume" icon={<SaveAltIcon />} {...a11yProps(2)} />
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons="on"
+          indicatorColor="primary"
+          textColor="primary"
+          aria-label="scrollable force tabs example"
+        >
+          
+          <Tab label="Me" icon={<FavoriteIcon />} {...a11yProps(0)} />
+          <Tab label="Portfolio" icon={<PersonPinIcon />} {...a11yProps(1)} />
+          <Tab label="Resume" icon={<HelpIcon />} {...a11yProps(2)} />
           </Tabs>
-        </AppBar>
+      </AppBar>
 
+      
+      {/* <TabPanel value={value } index={0}  >
+      Me
+      </TabPanel>
+      <TabPanel value={value } index={1}  >
+        Portfolio
+      </TabPanel>
+      <TabPanel value={value} index={2} >
+        Resume
+      </TabPanel> */}
 
-        {value === 0 && <Me />}
-        {value === 1 && <Portfolio />}
-        {value === 2 && <Resume />}
-
-      </div>
+      {value === 0 && <Me />}
+      {value === 1 && <Portfolio />}
+      {value === 2 && <Resume /> }
+      
+    </div>
     </>
   );
 }
 
 
 
+  

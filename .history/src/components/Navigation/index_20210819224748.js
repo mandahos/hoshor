@@ -68,33 +68,34 @@ export default function ScrollableTabsButtonForce() {
 
   return (
     <>
-      <div className={classes.root}>
-        <AppBar position="static" color="default">
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            variant="scrollable"
-            scrollButtons="on"
-            indicatorColor="primary"
-            textColor="primary"
-            aria-label="scrollable force tabs example"
-          >
-
-            <Tab label="Me" icon={<FaceIcon />} {...a11yProps(0)} />
-            <Tab label="Portfolio" icon={<WorkIcon />} {...a11yProps(1)} />
-            <Tab label="Resume" icon={<SaveAltIcon />} {...a11yProps(2)} />
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons="on"
+          indicatorColor="primary"
+          textColor="primary"
+          aria-label="scrollable force tabs example"
+        >
+          
+          <Tab label="Me" icon={<FaceIcon />} {...a11yProps(0)} />
+          <Tab label="Portfolio" icon={<WorkIcon />} {...a11yProps(1)} />
+          <Tab label="Resume" icon={<SaveAltIcon />} {...a11yProps(2)} />
           </Tabs>
-        </AppBar>
+      </AppBar>
 
 
-        {value === 0 && <Me />}
-        {value === 1 && <Portfolio />}
-        {value === 2 && <Resume />}
-
-      </div>
+      {value === 0 && <Me />}
+      {value === 1 && <Portfolio />}
+      {value === 2 && <Resume /> }
+      
+    </div>
     </>
   );
 }
 
 
 
+  

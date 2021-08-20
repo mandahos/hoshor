@@ -52,6 +52,9 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    
+        justify: "flex-start",
+        alignItems:"flex-start",
     width: '100%',
     backgroundColor: theme.palette.background.paper,
   },

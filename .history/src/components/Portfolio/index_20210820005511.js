@@ -15,14 +15,12 @@ const useStyles = makeStyles({
   root: {
     margin: 15,
     maxWidth: 200,
-    paddingLeft:10,
-    paddingRight:10
-
+    paddingLeft:15
+    
   },
   media: {
     height: 200,
   },
-  
   
 })
 

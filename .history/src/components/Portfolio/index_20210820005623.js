@@ -23,7 +23,6 @@ const useStyles = makeStyles({
     height: 200,
   },
   
-  
 })
 
 

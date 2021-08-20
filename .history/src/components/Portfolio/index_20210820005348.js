@@ -15,14 +15,10 @@ const useStyles = makeStyles({
   root: {
     margin: 15,
     maxWidth: 200,
-    paddingLeft:10,
-    paddingRight:10
-
   },
   media: {
     height: 200,
   },
-  
   
 })
 
@@ -47,7 +43,6 @@ export default function Projects() {
         direction="row"
         justify="flex-start"
         alignItems="flex-start"
-      
 
       >
         {data.map(elem => (

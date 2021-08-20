@@ -23,7 +23,6 @@ const useStyles = makeStyles({
     height: 200,
   },
   
-  
 })
 
 
@@ -56,7 +55,7 @@ export default function Projects() {
               <CardActionArea>
                 <CardMedia className={classes.media} image="{elem.image}" title="" />
                 <CardContent>
-                  <Typography gutterBottom variant="h10" component="h2">{elem.title}</Typography>
+                  <Typography gutterBottom variant="h10" component="h2" justifyContent="center">{elem.title}</Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>

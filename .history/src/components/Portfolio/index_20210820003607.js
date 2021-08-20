@@ -15,15 +15,11 @@ const useStyles = makeStyles({
   root: {
     margin: 15,
     maxWidth: 200,
-    paddingLeft:10,
-    paddingRight:10
-
   },
   media: {
     height: 200,
   },
-  
-  
+
 })
 
 
@@ -31,13 +27,13 @@ const useStyles = makeStyles({
 export default function Projects() {
   const classes = useStyles();
   const data = [
-    {title: 'Med-Planner', image:'./img/med-planner.jpg', glink: 'https://github.com/mandahos/med-planner', plink: 'https://med-planner.herokuapp.com/'},
-    {title: 'Dock-N-Flock', image:'', glink: '', plink: ''},
-    {title: 'Busy-Day', image:'', glink: 'https://github.com/mandahos/busy-day', plink: 'https://mandahos.github.io/busy-day/'},
-    {title: 'Secret Show', image:'', glink: 'https://github.com/mandahos/secret-show', plink: 'https://dante-poe.github.io/secret-show/'},
-    {title: 'OOP project', image:'', glink: 'https://github.com/mandahos/employee-tracker', plink: ''},
-    {title: 'Note Taker', image:'', glink: 'https://github.com/mandahos/Note-Taker', plink: 'https://stormy-harbor-19046.herokuapp.com/'},
-    
+    {title: Med-Planner},
+    {},
+    {},
+    {},
+    {},
+    {},
+
   ]
   return (
     <div>
@@ -47,24 +43,20 @@ export default function Projects() {
         direction="row"
         justify="flex-start"
         alignItems="flex-start"
-      
 
       >
         {data.map(elem => (
           <Grid item xs={8} sm={6} md={4} key={data.indexOf(elem)}>
             <Card className={classes.root}>
               <CardActionArea>
-                <CardMedia className={classes.media} image="{elem.image}" title="" />
+                <CardMedia className={classes.media} image="./img/med-planner.jpg" title="" />
                 <CardContent>
-                  <Typography gutterBottom variant="h10" component="h2">{elem.title}</Typography>
+                  <Typography gutterBottom variant="h10" component="h2">Med-Planner</Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="default" href={elem.glink}>
+                <Button size="small" color="default" href="https://github.com/mandahos/med-planner">
                   Go
-                </Button>
-                <Button size="small" color="default" href={elem.plink}>
-                  Source
                 </Button>
               </CardActions>
             </Card>

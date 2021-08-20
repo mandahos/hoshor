@@ -22,7 +22,9 @@ const useStyles = makeStyles({
   media: {
     height: 200,
   },
-  
+  h2 {
+    justify: center
+  }
   
 })
 

@@ -15,14 +15,10 @@ const useStyles = makeStyles({
   root: {
     margin: 15,
     maxWidth: 200,
-    paddingLeft:10,
-    paddingRight:10
-
   },
   media: {
     height: 200,
   },
-  
   
 })
 
@@ -37,7 +33,8 @@ export default function Projects() {
     {title: 'Secret Show', image:'', glink: 'https://github.com/mandahos/secret-show', plink: 'https://dante-poe.github.io/secret-show/'},
     {title: 'OOP project', image:'', glink: 'https://github.com/mandahos/employee-tracker', plink: ''},
     {title: 'Note Taker', image:'', glink: 'https://github.com/mandahos/Note-Taker', plink: 'https://stormy-harbor-19046.herokuapp.com/'},
-    
+    {title: 'Dock-N-Flock', image:'', glink: '', plink: ''},
+
   ]
   return (
     <div>
@@ -47,7 +44,6 @@ export default function Projects() {
         direction="row"
         justify="flex-start"
         alignItems="flex-start"
-      
 
       >
         {data.map(elem => (

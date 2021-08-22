@@ -11,12 +11,11 @@ const useStyles = makeStyles({
   root: {
     width: 500,
    
-   
   },
 });
 
 export default function LabelBottomNavigation() {
-  const footer = useStyles();
+  const classes = useStyles();
   const [value, setValue] = React.useState('recents');
 
   const handleChange = (event, newValue) => {
@@ -24,7 +23,7 @@ export default function LabelBottomNavigation() {
   };
 
   return (
-    <BottomNavigation value={value} onChange={handleChange} className={footer}>
+    <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
       <BottomNavigationAction a href="https://github.com/mandahos" label="GitHub" value="recents" icon={<GitHubIcon />} />
       <BottomNavigationAction a href="https://www.linkedin.com/in/amanda-hoshor/" label="LinkedIn" value="favorites" icon={<LinkedInIcon />} />
       <BottomNavigationAction a href="mailto:hoshor.manda@gmail.com" label="Email" value="nearby" icon={<AlternateEmailIcon />} />

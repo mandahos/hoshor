@@ -56,9 +56,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#f8edeb',
   },
   navBar:{
-    backgroundColor: '#FAF3F0',
-   
-    textColor: "#2C2628"
+    backgroundColor: '#FAF3F0'
   }
 }));
 
@@ -82,7 +80,7 @@ export default function ScrollableTabsButtonForce() {
             variant="scrollable"
             scrollButtons="on"
             indicatorColor="primary"
-            // textColor="primary"
+            textColor="primary"
             aria-label="scrollable force tabs example"
           >
 

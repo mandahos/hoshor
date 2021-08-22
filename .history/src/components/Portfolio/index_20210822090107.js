@@ -57,7 +57,7 @@ export default function Projects() {
 
       >
         {data.map(elem => (
-          <Grid item xs={8} sm={6} md={4} key={data.indexOf(elem.image)}>
+          <Grid item xs={8} sm={6} md={4} key={data.indexOf(elem)}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia className={classes.media} image={elem.image} title="" />

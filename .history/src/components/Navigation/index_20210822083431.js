@@ -53,13 +53,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '100%',
-    backgroundColor: '#f8edeb',
+    backgroundColor: '#7a6174',
   },
-  navBar:{
-    backgroundColor: '#FAF3F0',
-   
-    textColor: "#2C2628"
-  }
 }));
 
 export default function ScrollableTabsButtonForce() {
@@ -73,16 +68,15 @@ export default function ScrollableTabsButtonForce() {
 
   return (
     <>
-      <div >
+      <div className={classes.root}>
         <AppBar position="static" color="default">
           <Tabs
             value={value}
             onChange={handleChange}
-            className= {classes.navBar}
             variant="scrollable"
             scrollButtons="on"
             indicatorColor="primary"
-            // textColor="primary"
+            textColor="primary"
             aria-label="scrollable force tabs example"
           >
 

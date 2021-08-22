@@ -4,7 +4,5 @@
     margin-right: auto;
     margin-top: 25%;
     justify-content: center;
-    position: relative;
-    bottom: 0;
-   
+    position: static;
 }

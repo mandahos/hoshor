@@ -25,9 +25,6 @@ const useStyles = makeStyles({
     backgroundColor: '#D3C0D2',
     justifyContent: 'center'
   },
-  icon: {
-    backgroundColor: '#A6979C',
-  }
   
   
 })
@@ -42,7 +39,7 @@ export default function Projects() {
     {title: 'Busy-Day', image:'', glink: 'https://github.com/mandahos/busy-day', plink: 'https://mandahos.github.io/busy-day/'},
     {title: 'Secret Show', image:'', glink: 'https://github.com/mandahos/secret-show', plink: 'https://dante-poe.github.io/secret-show/'},
     {title: 'OOP project', image:'', glink: 'https://github.com/mandahos/employee-tracker', plink: ''},
-    {title: 'Note Taker', icon:'', glink: 'https://github.com/mandahos/Note-Taker', plink: 'https://stormy-harbor-19046.herokuapp.com/'},
+    {title: 'Note Taker', icon:'{<CommentOutlinedIcon />}', glink: 'https://github.com/mandahos/Note-Taker', plink: 'https://stormy-harbor-19046.herokuapp.com/'},
     
   ]
   return (
@@ -57,7 +54,7 @@ export default function Projects() {
 
       >
         {data.map(elem => (
-          <Grid item xs={8} sm={6} md={4} key={data.indexOf(elem.image)}>
+          <Grid item xs={8} sm={6} md={4} key={data.indexOf(elem)}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia className={classes.media} image={elem.image} title="" />

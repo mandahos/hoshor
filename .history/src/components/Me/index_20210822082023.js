@@ -15,26 +15,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import picture from '../../assets/images/portfolio.jpg'
 
 const useStyles = makeStyles({
-  header: {
-    background: '#3066BE',
+  root: {
+    background: '#b1b7d1',
     border: 0,
-    borderRadius: 4,
-    boxShadow: '0 5px 7px 2px #9b9fb5',
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
     height: 48,
     padding: '0 30px',
-    
   },
-  textBox: {
-    background: '#EEE7EE',
-    border: 0,
-    borderRadius: 4,
-    boxShadow: '0 5px 7px 2px #9b9fb5',
-    height: 170,
-    padding: '0 30px',
-    justify: 'centered'
-  }
-  
 });
 
 const Me = () => {
@@ -46,15 +35,14 @@ const Me = () => {
         align={'center'}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
-        direction={{ base: 'column', md: 'row' }}
-        >
+        direction={{ base: 'column', md: 'row' }}>
         
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading
             lineHeight={1.1}
             fontWeight={800}
             fontSize={36}
-            
+            className={classes.root}
             >
             <Text
               as={'span'}
@@ -68,18 +56,15 @@ const Me = () => {
                 left: 0,
                 bg: 'red.400',
                 zIndex: -1,
-                
               
-              }}
-              className={classes.header}>
-              Amanda Hoshor
+              }}>
+              Hiya,
             </Text>
             <br />
             
           </Heading>
-          <Text color={'black.500'} className={classes.textBox}>
-            <br />
-            Hiya! Web development recent graduate. Looking to enter the exciting world of web coding in an oppurtunity that provides growth. 
+          <Text color={'black.500'}>
+            My name is Amanda Hoshor. Web development recent graduate. Looking to enter the exciting world of web coding in an oppurtunity that provides growth. 
             <br/>
             Background in data entry and quality assurance. Obtained an information management degree in 2016. Strong background in quality assurance and control. 
           </Text>
@@ -108,13 +93,11 @@ const Me = () => {
               alt={'Me'}
               fit={'cover'}
               align={'center'}
-              padding={'25px'}
               w={'100%'}
               h={'75%'}
               src={
                 picture
               }
-              
             />
           </Box>
         </Flex>

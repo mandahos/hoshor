@@ -10,8 +10,7 @@ import CSS from './footer.css'
 const useStyles = makeStyles({
   root: {
     width: 500,
-   
-   
+    position: 'absolute'
   },
 });
 

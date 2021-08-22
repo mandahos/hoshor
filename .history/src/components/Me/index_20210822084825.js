@@ -25,15 +25,6 @@ const useStyles = makeStyles({
     padding: '0 30px',
     
   },
-  textBox: {
-    background: '#EEE7EE',
-    border: 0,
-    borderRadius: 4,
-    boxShadow: '0 5px 7px 2px #9b9fb5',
-    height: 170,
-    padding: '0 30px',
-    justify: 'centered'
-  }
   
 });
 
@@ -77,8 +68,7 @@ const Me = () => {
             <br />
             
           </Heading>
-          <Text color={'black.500'} className={classes.textBox}>
-            <br />
+          <Text color={'black.500'}>
             Hiya! Web development recent graduate. Looking to enter the exciting world of web coding in an oppurtunity that provides growth. 
             <br/>
             Background in data entry and quality assurance. Obtained an information management degree in 2016. Strong background in quality assurance and control. 

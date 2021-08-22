@@ -81,7 +81,7 @@ export default function ScrollableTabsButtonForce() {
             className= {classes.navBar}
             variant="scrollable"
             scrollButtons="on"
-            indicatorColor="primary"
+            // indicatorColor="primary"
             // textColor="primary"
             aria-label="scrollable force tabs example"
           >

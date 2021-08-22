@@ -5,6 +5,5 @@
     margin-top: 25%;
     justify-content: center;
     position: relative;
-    bottom: 0;
-   
+    min-height: 100vh;
 }

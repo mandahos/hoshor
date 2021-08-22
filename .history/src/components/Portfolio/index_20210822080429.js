@@ -8,7 +8,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import CommentOutlinedIcon from '@material-ui/icons/CommentOutlined';
 
 
 
@@ -21,13 +20,8 @@ const useStyles = makeStyles({
 
   },
   media: {
-    height: 175,
-    backgroundColor: '#D3C0D2',
-    justifyContent: 'center'
+    height: 100,
   },
-  icon: {
-    backgroundColor: '#A6979C',
-  }
   
   
 })
@@ -42,7 +36,7 @@ export default function Projects() {
     {title: 'Busy-Day', image:'', glink: 'https://github.com/mandahos/busy-day', plink: 'https://mandahos.github.io/busy-day/'},
     {title: 'Secret Show', image:'', glink: 'https://github.com/mandahos/secret-show', plink: 'https://dante-poe.github.io/secret-show/'},
     {title: 'OOP project', image:'', glink: 'https://github.com/mandahos/employee-tracker', plink: ''},
-    {title: 'Note Taker', icon:'', glink: 'https://github.com/mandahos/Note-Taker', plink: 'https://stormy-harbor-19046.herokuapp.com/'},
+    {title: 'Note Taker', image:'', glink: 'https://github.com/mandahos/Note-Taker', plink: 'https://stormy-harbor-19046.herokuapp.com/'},
     
   ]
   return (
@@ -57,10 +51,10 @@ export default function Projects() {
 
       >
         {data.map(elem => (
-          <Grid item xs={8} sm={6} md={4} key={data.indexOf(elem.image)}>
+          <Grid item xs={8} sm={6} md={4} key={data.indexOf(elem)}>
             <Card className={classes.root}>
               <CardActionArea>
-                <CardMedia className={classes.media} image={elem.image} title="" />
+                <CardMedia className={classes.media} image="{elem.image}" title="" />
                 <CardContent>
                   <Typography gutterBottom variant="h10" component="h2">{elem.title}</Typography>
                 </CardContent>

@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     border: 0,
     borderRadius: 4,
     boxShadow: '0 5px 7px 2px #9b9fb5',
-    height: 170,
+    height: 150,
     padding: '0 30px',
     justify: 'centered'
   }

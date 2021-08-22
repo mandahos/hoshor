@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
   },
   media: {
-    height: 75,
+    height: 175,
     backgroundColor: '#D3C0D2',
     justifyContent: 'center'
   },
